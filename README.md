@@ -39,8 +39,6 @@ Start the development server:
    npm run start
    Open your browser and navigate to http://localhost:3000 to view the application.
    ```
-# Project Name
-
 ## File Structure
 
 Below is the file structure for this project:
