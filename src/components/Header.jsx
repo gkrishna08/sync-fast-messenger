@@ -1,6 +1,7 @@
 import React from "react";
 import '../Style.css';
-import logo from '../sync-fast-messenger.png';
+import logo from '../assets/sync-fast-messenger.png';
+
 function Header({ onLogoClick, loggedUser }){
     return(
         <header className="header">

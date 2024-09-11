@@ -3,13 +3,14 @@ import React, { useState } from 'react';
 import ChatWindow from './components/ChatWindow.jsx';
 import TextInputBox from './components/TextInputBox.jsx';
 import ChatUsers from './components/ChatUsers.jsx';
-import avatar1 from './avatar.jpg';
-import avatar2 from './avatar2.jpg';
-import avatar3 from './avatar3.jpg';
-import avatar4 from './avatar4.png';
+import avatar1 from './assets/avatar.jpg';
+import avatar2 from './assets/avatar2.jpg';
+import avatar3 from './assets/avatar3.jpg';
+import avatar4 from './assets/avatar4.png';
 import Header from './components/Header.jsx';
 import UserHeader from './components/UserHeader.jsx';
 
+// Define initial user data
 const basicUsers =[
   {id: 1, name: 'Ram', pic: avatar1, messages: []},
   {id: 2, name: 'Raj', pic: avatar2, messages: []},
@@ -17,21 +18,25 @@ const basicUsers =[
   {id: 4, name: 'JQF', pic: avatar4, messages: []},
 ]
 function App() {
-  console.log("App renders");
+
   const [selectedUserId, setSelectedUserId] = useState(null);
   const [users, setUsers] = useState(basicUsers);
   const [loggedUserId] = useState(1);
 
+  // Find the logged-in user and the selected user from the list
   const loggedInUser = users.find(user => user.id === loggedUserId);
   const selectedUser = users.find(user => user.id === selectedUserId);
   
+  // Function for selecting a user
   const userSelect = (user) => {
     setSelectedUserId(user.id);
   };
 
+  // Function for sending a message
   const sendMessage =(message) => {
-    if(selectedUserId === null) return;
+    if(selectedUserId === null) return; //return if no user is selected
     
+    // Create a new message object
     const newMessage = {
       text: message,
       time: new Date(),
@@ -39,6 +44,7 @@ function App() {
       receiverId: selectedUserId,
     };
     
+    // Update the users state with the new message
     setUsers((lastUser) => { 
       return lastUser.map(user => {
         if(user.id === selectedUserId){
@@ -53,6 +59,7 @@ function App() {
     });
   }
 
+  // Function for logo click/reload the page
   const logoClick = () => {
     window.location.reload();
   };

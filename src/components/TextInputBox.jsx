@@ -4,11 +4,12 @@ import '../Style.css';
 function TextInputBox({ onSend }){
     const [message, setMessage] = useState('');
     
+    // Function for submit the form
     const onClickSubmit = (msg) => {
-        msg.preventDefault();
-        if(message.trim()){
+        msg.preventDefault();  // To Prevent the default form submission
+        if(message.trim()){    // To Check if the message is not just whitespace
             onSend(message);
-            setMessage('');
+            setMessage('');    // To clear the input field after sending the message
         }
     };
     return (
