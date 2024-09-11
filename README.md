@@ -1,7 +1,7 @@
 # **Sync Fast Messenger**
 
 A simple React-based messenger application that allows logged in user to chat with each other. This app supports basic messaging features and showcases how to manage chat in a React application.
-
+Live Demo - https://sync-fast-messenger.vercel.app/
 ## Features
 
 - Select a user to start chatting.
