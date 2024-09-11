@@ -5,7 +5,6 @@ A simple React-based messenger application that allows logged in user to chat wi
 ## Features
 
 - Select a user to start chatting.
-- Send and receive messages in real-time.
 - Each user can see messages from the selected chat.
 - Website can be refreshed by clicking on the logo.
 
