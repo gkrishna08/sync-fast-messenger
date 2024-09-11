@@ -50,5 +50,5 @@ src/
 │   ├── **ChatUsers.jsx** - Lists all users.
 │   ├── **Header.jsx** - Application header with a logo.
 │   ├── **UserHeader.jsx** - Displays selected user's profile.
-│   └── **App.jsx** - Main application component.
+└── **App.jsx** - Main application component.
 └── **Style.css** - Styles for the application.
