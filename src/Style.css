@@ -28,7 +28,7 @@
   color: black;
   font-size: 28px;
   text-align: center;
-  background: url('./sync-fast-messenger-transparent.png') no-repeat center center fixed;
+  background: url('./assets/sync-fast-messenger-transparent.png') no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
   flex-direction: column;
